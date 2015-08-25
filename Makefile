@@ -1,10 +1,15 @@
 
-.PHONY: all clean deps lint
+.PHONY: all clean deps lint bindata
+
+all: deps bindata lint
+
+bindata:
+	@go-bindata -prefix=raw-data/ raw-data/
 
 lint:
 	@-go vet ./...
-	@-golint ./... |grep -v bindata/template/* |grep -v bindata/static/*
 
 deps:
 	@go get -u -v github.com/golang/lint/golint
 	@go get -u -v github.com/jteeuwen/go-bindata/...
+	@go get -u -v github.com/labstack/echo
