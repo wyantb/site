@@ -1,0 +1,22 @@
+@import "variables";
+
+.header {
+    .tabs {
+        display: inline-block;
+    }
+    .tab {
+        line-height: @brandEffectiveLineHeight;
+    }
+
+    .brand {
+        padding: @headerPadding (@headerPadding * 2);
+        padding-left: 0;
+        font-size: @brandSize;
+        text-decoration: none;
+        color: @brandColor;
+        vertical-align: middle;
+        .back-hover();
+    }
+}
+
+@import "tabs";

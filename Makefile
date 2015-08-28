@@ -1,9 +1,12 @@
 
-.PHONY: all clean deps lint bindata less
+.PHONY: all clean deps lint bindata less lessmin
 
 all: deps bindata lint
 
 less:
+	lessc css/global.less css/global.css
+
+lessmin:
 	lessc css/global.less css/global.css --clean-css="--s1 --advanced --compatibility=ie8"
 
 bindata:

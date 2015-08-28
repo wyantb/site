@@ -1,0 +1,26 @@
+@import "variables";
+
+.tabs {
+    margin: 0 0 0 auto;
+
+    .tab {
+        list-style: none;
+        display: inline-block;
+        float: right; // TODO flexbox
+        padding: 0 @spacing;
+        vertical-align: middle;
+        .back-hover();
+
+    }
+
+    .action {
+        text-decoration: none;
+        padding-bottom: @tabUnderlineSep;
+        border-bottom: 1px solid black;
+        color: @textColor;
+
+        &:hover {
+            border-bottom-color: @standardLinkColor;
+        }
+    }
+}
