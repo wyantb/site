@@ -1,43 +1,11 @@
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
+/* A better looking default horizontal rule */
 hr {
     display: block;
     height: 1px;
@@ -47,12 +15,7 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
+/* Remove gaps and such */
 audio,
 canvas,
 iframe,
@@ -62,27 +25,12 @@ video {
     vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
+/* Remove default fieldset styles.  */
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
 
 .browserupgrade {
     margin: 0.2em 0;
@@ -91,34 +39,7 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- */
-
+/* Hide visually and from screen readers: */
 .hidden {
     display: none !important;
 }
@@ -127,7 +48,6 @@ textarea {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -144,7 +64,6 @@ textarea {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -155,10 +74,7 @@ textarea {
     width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
+/* Hide visually and from screen readers, but maintain layout */
 .invisible {
     visibility: hidden;
 }
@@ -185,29 +101,6 @@ textarea {
     clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
 @media print {
     *,
     *:before,
@@ -232,11 +125,6 @@ textarea {
         content: " (" attr(title) ")";
     }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -247,11 +135,6 @@ textarea {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
 
     thead {
         display: table-header-group;
