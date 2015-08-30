@@ -3,24 +3,35 @@
 .tabs {
     margin: 0 0 0 auto;
 
+    .activeish() {
+        padding: 0 @actionPaddingActive;
+        border-bottom: @tabBorderActive;
+    }
+
     .tab {
         list-style: none;
         display: inline-block;
-        float: right; // TODO flexbox
-        padding: 0 @spacing;
         vertical-align: middle;
         .back-hover();
-
     }
 
     .action {
         text-decoration: none;
         padding-bottom: @tabUnderlineSep;
-        border-bottom: 1px solid black;
+        border-bottom: @tabBorderDefault;
         color: @textColor;
+        padding: 0 @actionPadding;
+        .box-sizing();
+        .transition(~"padding @{standardDuration} linear");
 
         &:hover {
-            border-bottom-color: @standardLinkColor;
+            .activeish();
+        }
+    }
+
+    .tab.active {
+        .action {
+            .activeish();
         }
     }
 }

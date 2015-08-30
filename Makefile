@@ -1,7 +1,7 @@
 
 .PHONY: all clean deps lint bindata less lessmin
 
-all: deps bindata lint
+all: less bindata lint
 
 less:
 	lessc css/global.less css/global.css

@@ -1,20 +1,40 @@
+@standardDuration: 0.125s;
 @mainWidth: 800px;
 @textIndent: 30px;
 @headerPadding: 5px;
-@spacing: 10px;
 @tabUnderlineSep: 3px;
 @textColor: #222;
 @brandSize: 24px; // 1.5em
 @globalLineHeight: 1.4;
 @brandEffectiveLineHeight: @brandSize * @globalLineHeight + (@headerPadding * 2);
 @brandColor: darken(#5bc0de, 18%);
-@hoverBack: darken(rgba(255, 255, 255, 0.7), 04%);
-@standardLinkColor: rgb(0, 0, 238);
+
 @h1Size: 1.8em;
 @h1Margin: 0.4em;
+
+@hoverBack: darken(rgba(255, 255, 255, 0.7), 04%);
+@standardLinkColor: rgb(0, 0, 238);
+@tabBorderDefault: 1px solid black;
+@tabBorderActive: 2px solid lighten(@standardLinkColor, 20%);
+@actionPadding: 5px;
+@actionPaddingActive: 5px;
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
 
 .back-hover() {
     &:hover {
         background-color: @hoverBack;
     }
 }
+
