@@ -15,7 +15,7 @@ lessmin:
 	lessc css/global.less css/global.css --clean-css="--s1 --advanced --compatibility=ie8"
 
 bindata:
-	@go-bindata -prefix=raw-data/ raw-data/
+	@go-bindata -pkg=data -prefix=raw-data/ -o=data/raw.go raw-data/
 
 lint:
 	@-go vet ./...
