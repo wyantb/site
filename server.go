@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -20,5 +21,8 @@ func main() {
 
 	e.Get("/", hello)
 
-	e.Run(":1323")
+	port := 1323
+	fmt.Printf("Running on port: %d\n", port)
+	portspec := fmt.Sprintf(":%d", port)
+	e.Run(portspec)
 }
