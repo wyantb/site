@@ -1,7 +1,12 @@
 
-.PHONY: all clean deps lint bindata less lessmin
+.PHONY: all clean deps lint bindata less lessmin devserver dev
 
 all: less bindata lint
+
+dev: all devserver
+
+devserver:
+	go run server.go
 
 less:
 	lessc css/global.less css/global.css
