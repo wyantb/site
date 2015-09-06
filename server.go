@@ -13,9 +13,6 @@ import (
 func genericError(c *echo.Context) {
 	c.String(http.StatusInternalServerError, "Error in request")
 }
-func hello(c *echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!\n")
-}
 func largeReported(c *echo.Context) error {
 	data, err := data.Asset("LargeCommercialBuildingsReported.json")
 	if err != nil {
@@ -39,9 +36,15 @@ func main() {
 	e.Use(mw.Logger())
 	e.Use(mw.Logger())
 
-	e.Get("/", hello)
 	e.Get("/data/large-buildings-reported.json", largeReported)
 	e.Get("/data/large-buildings-unreported.json", largeUnreported)
+
+	e.Static("/js/", "assets/js")
+	e.Static("/css/", "assets/css")
+
+	e.ServeFile("/about", "about.html")
+	e.ServeFile("/", "index.html")
+	e.ServeFile("/index", "index.html")
 
 	port := 1323
 	fmt.Printf("Running on port: %d\n", port)
