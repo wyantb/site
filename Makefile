@@ -23,6 +23,6 @@ lint:
 deps:
 	npm install -g less
 	npm install -g less-plugin-clean-css
-	@go get -u -v github.com/golang/lint/golint
 	@go get -u -v github.com/jteeuwen/go-bindata/...
-	@go get -u -v github.com/labstack/echo
+#	@go get -u -v github.com/golang/lint/golint
+#	@go get -u -v github.com/labstack/echo
