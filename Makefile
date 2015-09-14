@@ -6,7 +6,7 @@ all: less bindata lint
 dev: all devserver
 
 devserver:
-	go install server.go
+	GOBIN=./ go install server.go
 	./server
 	# If I want to force all assets to be bundled in binary?
 	#(cd ../ && site/server)
