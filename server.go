@@ -42,9 +42,9 @@ func main() {
 	e.Static("/js/", "assets/js")
 	e.Static("/css/", "assets/css")
 
-	e.ServeFile("/about", "about.html")
-	e.ServeFile("/", "index.html")
-	e.ServeFile("/index", "index.html")
+	e.ServeFile("/about", "assets/about.html")
+	e.ServeFile("/", "assets/index.html")
+	e.ServeFile("/index", "assets/index.html")
 
 	port := 1323
 	fmt.Printf("Running on port: %d\n", port)

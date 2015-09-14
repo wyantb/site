@@ -6,7 +6,10 @@ all: less bindata lint
 dev: all devserver
 
 devserver:
-	go run server.go
+	go install server.go
+	./server
+	# If I want to force all assets to be bundled in binary?
+	#(cd ../ && site/server)
 
 less:
 	lessc css/global.less assets/css/global.css
@@ -16,6 +19,7 @@ lessmin:
 
 bindata:
 	@go-bindata -pkg=data -prefix=raw-data/ -o=data/raw.go raw-data/
+	#@go-bindata -pkg=assets -prefix=assets/ -o=assets/raw.go assets/
 
 lint:
 	@-go vet ./...
