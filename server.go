@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
+	"strconv"
 
 	"github.com/labstack/echo"
 	mw "github.com/labstack/echo/middleware"
@@ -46,7 +48,16 @@ func main() {
 	e.ServeFile("/", "assets/index.html")
 	e.ServeFile("/index", "assets/index.html")
 
-	port := 1323
+	args := os.Args[1:]
+	port := 80
+	if len(args) >= 1 {
+		parsed, err := strconv.Atoi(args[0])
+		if err != nil {
+			panic(err)
+		}
+		port = parsed
+	}
+
 	fmt.Printf("Running on port: %d\n", port)
 	portspec := fmt.Sprintf(":%d", port)
 	e.Run(portspec)

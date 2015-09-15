@@ -7,7 +7,7 @@ dev: all devserver
 
 devserver:
 	GOBIN=./ go install server.go
-	./server
+	./server 1323
 	# If I want to force all assets to be bundled in binary?
 	#(cd ../ && site/server)
 
