@@ -1,7 +1,7 @@
 
-.PHONY: all clean deps lint bindata less lessmin devserver dev
+.PHONY: all clean deps lint bindata less lessmin devserver dev fonts
 
-all: less bindata lint
+all: less fonts bindata lint
 
 dev: all devserver
 
@@ -20,6 +20,10 @@ lessmin:
 bindata:
 	@go-bindata -pkg=data -prefix=raw-data/ -o=data/raw.go raw-data/
 	#@go-bindata -pkg=assets -prefix=assets/ -o=assets/raw.go assets/
+
+fonts:
+	mkdir -p assets/css/fonts
+	cp css/fonts/* assets/css/fonts
 
 lint:
 	@-go vet ./...
