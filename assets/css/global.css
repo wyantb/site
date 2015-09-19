@@ -731,11 +731,11 @@ p {
 }
 .tabs .action:hover {
   padding: 0 5px;
-  border-bottom: 2px solid #5555ff;
+  border-bottom: 2px solid #8888ff;
 }
 .tabs .tab.active .action {
   padding: 0 5px;
-  border-bottom: 2px solid #5555ff;
+  border-bottom: 2px solid #8888ff;
 }
 .l-main {
   max-width: 800px;
