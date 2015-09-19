@@ -14,8 +14,8 @@ devserver:
 less: lessmin
 
 lessmin:
-	lessc css/global.less assets/css/global.css
-	#lessc css/global.less assets/css/global.css --clean-css="--s1 --advanced --compatibility=ie8"
+	#lessc css/global.less assets/css/global.css
+	lessc css/global.less assets/css/global.css --clean-css="--s1 --advanced --compatibility=ie8"
 
 bindata:
 	@go-bindata -pkg=data -prefix=raw-data/ -o=data/raw.go raw-data/
