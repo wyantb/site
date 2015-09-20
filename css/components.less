@@ -3,13 +3,14 @@
 .header {
     .tabs {
         display: inline-block;
+        -webkit-padding-start: @headerPadding;
     }
     .tab {
         line-height: @brandEffectiveLineHeight;
     }
 
     .brand {
-        padding: @headerPadding (@headerPadding * 2);
+        padding-top: @headerPadding;
         padding-left: 0;
         font-size: @brandSize;
         text-decoration: none;

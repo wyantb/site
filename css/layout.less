@@ -1,11 +1,20 @@
 @import "variables";
 
-.l-main {
-    max-width: @mainWidth;
-    margin: 0 auto;
-}
-
 .l-flexrow {
     display: flex;
     flex-direction: row;
+}
+
+body {
+    padding: 0 @mobileMargin;
+    .box-sizing();
+}
+@media (min-width: @mainWidth) {
+    body {
+        padding: 0;
+    }
+    .l-main {
+        max-width: @mainWidth;
+        margin: 0 auto;
+    }
 }
