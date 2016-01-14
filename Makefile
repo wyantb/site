@@ -24,6 +24,8 @@ bindata:
 assets:
 	mkdir -p assets/css/fonts
 	cp css/fonts/* assets/css/fonts
+	mkdir -p assets/js
+	cp js/* assets/js
 
 lint:
 	@-go vet ./...

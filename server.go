@@ -48,6 +48,14 @@ func main() {
 	e.ServeFile("/", "assets/index.html")
 	e.ServeFile("/index", "assets/index.html")
 
+	e.ServeFile("/chrome-crash", "assets/ChromeCrash.html")
+	e.ServeFile("/25mb", "25mb")
+	e.ServeFile("/100mb", "100mb")
+	e.ServeFile("/250mb", "250mb")
+	e.ServeFile("/500mb", "500mb")
+	e.ServeFile("/1000mb", "1000mb")
+	e.ServeFile("/2000mb", "2000mb")
+
 	args := os.Args[1:]
 	port := 80
 	if len(args) >= 1 {
