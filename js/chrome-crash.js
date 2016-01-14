@@ -10,13 +10,6 @@
         link.href = url;
         link.download = name;
         link.textContent = 'save';
-
-        // } else if (window.document.createEvent) {
-        //     ev = window.document.createEvent('MouseEvents');
-        //     ev.initMouseEvent('click', true, true, window,
-        //                   0, 0, 0, 0, 0, false, false, false, false, 0, null);
-        //     link.dispatchEvent(ev);
-        // } else {
         link.click();
 
         // FF guard
